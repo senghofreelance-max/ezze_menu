@@ -1,0 +1,53 @@
+export const designSystem = {
+	colors: {
+		primary: "#FFED65",
+		primaryContrast: "#2E2A11",
+		secondary: "#2F6BFF",
+		secondaryContrast: "#F8FAFC",
+		success: "#16A34A",
+		warning: "#F59E0B",
+		error: "#DC2626",
+		info: "#0EA5E9",
+		heading: "#111827",
+		body: "#334155",
+		muted: "#64748B",
+		surface: "#FFFDF5",
+		surfaceAlt: "#F8FAFC",
+		border: "#E2E8F0",
+	},
+	spacing: {
+		"2xs": "0.25rem",
+		xs: "0.5rem",
+		sm: "0.75rem",
+		md: "1rem",
+		lg: "1.5rem",
+		xl: "2rem",
+		"2xl": "3rem",
+	},
+};
+
+export function getCssVariableMap() {
+	return {
+		"--color-primary": designSystem.colors.primary,
+		"--color-primary-contrast": designSystem.colors.primaryContrast,
+		"--color-secondary": designSystem.colors.secondary,
+		"--color-secondary-contrast": designSystem.colors.secondaryContrast,
+		"--color-success": designSystem.colors.success,
+		"--color-warning": designSystem.colors.warning,
+		"--color-error": designSystem.colors.error,
+		"--color-info": designSystem.colors.info,
+		"--color-heading": designSystem.colors.heading,
+		"--color-body": designSystem.colors.body,
+		"--color-muted": designSystem.colors.muted,
+		"--color-surface": designSystem.colors.surface,
+		"--color-surface-alt": designSystem.colors.surfaceAlt,
+		"--color-border": designSystem.colors.border,
+		"--space-2xs": designSystem.spacing["2xs"],
+		"--space-xs": designSystem.spacing.xs,
+		"--space-sm": designSystem.spacing.sm,
+		"--space-md": designSystem.spacing.md,
+		"--space-lg": designSystem.spacing.lg,
+		"--space-xl": designSystem.spacing.xl,
+		"--space-2xl": designSystem.spacing["2xl"],
+	};
+}

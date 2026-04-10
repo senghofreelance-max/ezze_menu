@@ -1,0 +1,1 @@
+import{_ as s,c as n,b as t,o as a}from"./main-Bd_2hixn.js";const o={},r={class:"app-panel p-lg"};function c(p,e){return a(),n("section",r,[...e[0]||(e[0]=[t("h2",{class:"app-section-title"},"Settings",-1),t("p",{class:"mt-sm text-sm text-muted"},"Prepared for business profile, integrations, and operational preferences.",-1)])])}const l=s(o,[["render",c]]);export{l as default};

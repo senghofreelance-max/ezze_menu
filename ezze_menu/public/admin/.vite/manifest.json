@@ -1,0 +1,124 @@
+{
+  "_EzzeButton-CJU2CTve.js": {
+    "file": "assets/EzzeButton-CJU2CTve.js",
+    "name": "EzzeButton",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "_useDarkMode-BciBZOQt.js": {
+    "file": "assets/useDarkMode-BciBZOQt.js",
+    "name": "useDarkMode",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "index.html": {
+    "file": "assets/main-Bd_2hixn.js",
+    "name": "main",
+    "src": "index.html",
+    "isEntry": true,
+    "dynamicImports": [
+      "src/pages/auth/LoginPage.vue",
+      "src/layouts/AdminShell.vue",
+      "src/pages/dashboard/DashboardPage.vue",
+      "src/pages/dashboard/OrdersPage.vue",
+      "src/pages/dashboard/CatalogPage.vue",
+      "src/pages/dashboard/SettingsPage.vue",
+      "src/pages/auth/LoginPage.vue",
+      "src/pages/dashboard/CatalogPage.vue",
+      "src/pages/dashboard/DashboardPage.vue",
+      "src/pages/dashboard/OrdersPage.vue",
+      "src/pages/dashboard/SettingsPage.vue"
+    ],
+    "css": [
+      "assets/main-CXEGc3WG.css"
+    ],
+    "assets": [
+      "assets/primeicons-DMOk5skT.eot",
+      "assets/primeicons-C6QP2o4f.woff2",
+      "assets/primeicons-WjwUDZjB.woff",
+      "assets/primeicons-MpK4pl85.ttf",
+      "assets/primeicons-Dr5RGzOO.svg"
+    ]
+  },
+  "node_modules/primeicons/fonts/primeicons.eot": {
+    "file": "assets/primeicons-DMOk5skT.eot",
+    "src": "node_modules/primeicons/fonts/primeicons.eot"
+  },
+  "node_modules/primeicons/fonts/primeicons.svg": {
+    "file": "assets/primeicons-Dr5RGzOO.svg",
+    "src": "node_modules/primeicons/fonts/primeicons.svg"
+  },
+  "node_modules/primeicons/fonts/primeicons.ttf": {
+    "file": "assets/primeicons-MpK4pl85.ttf",
+    "src": "node_modules/primeicons/fonts/primeicons.ttf"
+  },
+  "node_modules/primeicons/fonts/primeicons.woff": {
+    "file": "assets/primeicons-WjwUDZjB.woff",
+    "src": "node_modules/primeicons/fonts/primeicons.woff"
+  },
+  "node_modules/primeicons/fonts/primeicons.woff2": {
+    "file": "assets/primeicons-C6QP2o4f.woff2",
+    "src": "node_modules/primeicons/fonts/primeicons.woff2"
+  },
+  "src/layouts/AdminShell.vue": {
+    "file": "assets/AdminShell-CDITqCzx.js",
+    "name": "AdminShell",
+    "src": "src/layouts/AdminShell.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_useDarkMode-BciBZOQt.js",
+      "_EzzeButton-CJU2CTve.js"
+    ]
+  },
+  "src/pages/auth/LoginPage.vue": {
+    "file": "assets/LoginPage-C7wgE3k2.js",
+    "name": "LoginPage",
+    "src": "src/pages/auth/LoginPage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_EzzeButton-CJU2CTve.js",
+      "_useDarkMode-BciBZOQt.js"
+    ]
+  },
+  "src/pages/dashboard/CatalogPage.vue": {
+    "file": "assets/CatalogPage-BYMjTGdu.js",
+    "name": "CatalogPage",
+    "src": "src/pages/dashboard/CatalogPage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  },
+  "src/pages/dashboard/DashboardPage.vue": {
+    "file": "assets/DashboardPage-0om_UGT-.js",
+    "name": "DashboardPage",
+    "src": "src/pages/dashboard/DashboardPage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_EzzeButton-CJU2CTve.js"
+    ]
+  },
+  "src/pages/dashboard/OrdersPage.vue": {
+    "file": "assets/OrdersPage-BD_pSypm.js",
+    "name": "OrdersPage",
+    "src": "src/pages/dashboard/OrdersPage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  },
+  "src/pages/dashboard/SettingsPage.vue": {
+    "file": "assets/SettingsPage-EnHoKncj.js",
+    "name": "SettingsPage",
+    "src": "src/pages/dashboard/SettingsPage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  }
+}

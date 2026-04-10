@@ -1,14 +1,14 @@
 app_name = "ezze_menu"
 app_title = "Ezze Menu"
 app_publisher = "Sengho"
-app_description = "an app to order from telegram"
+app_description = "Telegram mini app for menu browsing and ordering"
 app_email = "sengho.freelance@gmail.com"
 app_license = "mit"
 
 # Apps
 # ------------------
 
-# required_apps = []
+required_apps = ["tg_starter_template","ezze_payment"]
 
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
@@ -242,7 +242,7 @@ app_license = "mit"
 export_python_type_annotations = True
 
 # Require all whitelisted methods to have type annotations
-require_type_annotated_api_methods = True
+require_type_annotated_api_methods = False
 
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
@@ -252,4 +252,3 @@ require_type_annotated_api_methods = True
 # ------------
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
-

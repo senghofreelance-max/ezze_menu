@@ -1,0 +1,1 @@
+import{_ as t,c as r,b as s,o as a}from"./main-Bd_2hixn.js";const o={},c={class:"app-panel p-lg"};function l(n,e){return a(),r("section",c,[...e[0]||(e[0]=[s("h2",{class:"app-section-title"},"Orders",-1),s("p",{class:"mt-sm text-sm text-muted"},"Scalable route placeholder for order queues, fulfillment states, and filters.",-1)])])}const d=t(o,[["render",l]]);export{d as default};
