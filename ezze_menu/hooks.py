@@ -1,7 +1,7 @@
 app_name = "ezze_menu"
 app_title = "Ezze Menu"
 app_publisher = "Sengho"
-app_description = "An app for order from telegram"
+app_description = "an app to order from telegram"
 app_email = "sengho.freelance@gmail.com"
 app_license = "mit"
 

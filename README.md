@@ -1,6 +1,6 @@
 ### Ezze Menu
 
-An app for order from telegram
+an app to order from telegram
 
 ### Installation
 
