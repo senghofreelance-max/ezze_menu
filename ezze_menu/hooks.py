@@ -38,7 +38,12 @@ required_apps = ["tg_starter_template","ezze_payment"]
 # include js, css files in header of web form
 # webform_include_js = {"doctype": "public/js/doctype.js"}
 # webform_include_css = {"doctype": "public/css/doctype.css"}
-
+website_route_rules = [
+    {"from_route": "/menu-admin", "to_route": "/menu-admin"},
+    {"from_route": "/menu-admin/<path:dashboard>", "to_route": "/menu-admin"},
+    {"from_route": "/order-app", "to_route": "/order-app"},
+    {"from_route": "/order-app/<path:page>", "to_route": "/order-app"},
+]
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
 

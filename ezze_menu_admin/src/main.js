@@ -53,7 +53,9 @@ async function loadInitialData() {
 }
 
 async function loadDynamicRoutes() {
-	const response = await call.post(ADMIN_DYNAMIC_ROUTES_METHOD);
+	const response = await call.post(ADMIN_DYNAMIC_ROUTES_METHOD, {
+		root: ADMIN_FRONTEND_PROJECT,
+	});
 	const dynamicRoutes = response.message || [];
 
 	dynamicRoutes.forEach((item) => {

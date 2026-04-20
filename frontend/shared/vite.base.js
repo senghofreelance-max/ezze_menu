@@ -16,10 +16,15 @@ function getCommonSiteConfig() {
 	return JSON.parse(fs.readFileSync(configPath, "utf8"));
 }
 
-function getProxyOptions() {
+// base must be the Frappe asset path: /assets/<app_name>/<subfolder>/
+// In dev mode we bypass proxying for this app's own assets so Vite serves them.
+function getProxyOptions(base) {
 	const config = getCommonSiteConfig();
 	const devMode = config?.developer_mode || 0;
 	const webserverPort = devMode === 1 ? 8989 : config?.webserver_port || 8989;
+
+	// Derive the app-name prefix from base (e.g. "/assets/ezze_menu/menu_admin/" → "ezze_menu")
+	const ownAssetPrefix = base?.startsWith("/assets/") ? `/assets/${base.split("/")[2]}/` : null;
 
 	return {
 		"^/(app|login|api|assets|files|private)": {
@@ -30,14 +35,20 @@ function getProxyOptions() {
 				const siteName = request.headers.host?.split(":")[0] || "localhost";
 				return `http://${siteName}:${webserverPort}`;
 			},
+			bypass(req) {
+				// Let Vite serve this app's own assets instead of proxying to Frappe
+				if (ownAssetPrefix && req.url?.startsWith(ownAssetPrefix)) {
+					return req.url;
+				}
+			},
 		},
 	};
 }
 
-export function createSharedViteConfig({ appDir, base, outDir, port }) {
-	return defineConfig({
+export function createSharedViteConfig({ appDir, base, devBase, outDir, port }) {
+	return defineConfig(({ command }) => ({
 		plugins: [vue()],
-		base,
+		base: command === "serve" ? (devBase || base) : base,
 		resolve: {
 			alias: {
 				"@": path.resolve(appDir, "src"),
@@ -57,7 +68,7 @@ export function createSharedViteConfig({ appDir, base, outDir, port }) {
 		server: {
 			host: true,
 			port,
-			proxy: getProxyOptions(),
+			proxy: getProxyOptions(base),
 		},
 		build: {
 			manifest: true,
@@ -69,5 +80,5 @@ export function createSharedViteConfig({ appDir, base, outDir, port }) {
 				},
 			},
 		},
-	});
+	}));
 }

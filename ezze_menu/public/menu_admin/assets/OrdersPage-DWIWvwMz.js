@@ -1,0 +1,1 @@
+import{_ as t,o as r,c as a,b as s}from"./main-qx6U4PWK.js";const o={},c={class:"app-panel p-lg"};function l(n,e){return r(),a("section",c,[...e[0]||(e[0]=[s("h2",{class:"app-section-title"},"Orders",-1),s("p",{class:"mt-sm text-sm text-muted"},"Scalable route placeholder for order queues, fulfillment states, and filters.",-1)])])}const d=t(o,[["render",l]]);export{d as default};

@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 const routes = [
 	{
 		path: "/",
-		redirect: "/menu-admin",
+		redirect: "/menu-admin/",
 	},
 	{
 		path: "/menu-admin/login",
@@ -23,24 +23,6 @@ const routes = [
 				meta: { title: "Overview" },
 				component: () => import("../pages/dashboard/DashboardPage.vue"),
 			},
-			{
-				path: "orders",
-				name: "menu-admin-orders",
-				meta: { title: "Orders" },
-				component: () => import("../pages/dashboard/OrdersPage.vue"),
-			},
-			{
-				path: "catalog",
-				name: "menu-admin-catalog",
-				meta: { title: "Catalog" },
-				component: () => import("../pages/dashboard/CatalogPage.vue"),
-			},
-			{
-				path: "settings",
-				name: "menu-admin-settings",
-				meta: { title: "Settings" },
-				component: () => import("../pages/dashboard/SettingsPage.vue"),
-			},
 		],
 	},
 	{
@@ -50,6 +32,6 @@ const routes = [
 ];
 
 export default createRouter({
-	history: createWebHistory(),
+	history: createWebHistory("/"),
 	routes,
 });

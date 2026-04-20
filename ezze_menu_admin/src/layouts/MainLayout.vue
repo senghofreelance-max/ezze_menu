@@ -11,9 +11,9 @@
 
         <div class="flex min-h-screen flex-1 flex-col">
             <header class="sticky top-0 z-20 border-b border-border bg-surface/90 px-lg py-xs backdrop-blur">
-                <div class="mx-8 flex max-w-8xl items-center justify-between gap-3">
+                <div class="flex max-w-8xl items-center justify-between gap-3">
                     <div>
-                        <p class="text-xs font-bold uppercase tracking-[0.2em] text-muted">Dashboard</p>
+                        <!-- <p class="text-xs font-bold uppercase tracking-[0.2em] text-muted">{{ title }}</p> -->
                         <h2 class="text-lg font-bold leading-tight text-heading">{{ title }}</h2>
                     </div>
                     <div class="flex items-center gap-sm">

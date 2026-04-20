@@ -59,7 +59,7 @@
             <div class="space-y-md">
                 <p class="text-sm text-body">Use this shared dialog wrapper for confirmations and CRUD flows.</p>
                 <div class="flex justify-end">
-                    <AppButton @click="dialogVisible = false">Close</AppButton>
+                    <AppButton variant="primary" @click="dialogVisible = false">Close</AppButton>
                 </div>
             </div>
         </AppDialog>

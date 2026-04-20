@@ -1,6 +1,6 @@
 <template>
-	<AppToast />
-	<RouterView />
+    <AppToast />
+    <RouterView />
 </template>
 
 <script setup>

@@ -5,7 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite --port 8086",
-		"build": "vite build && node ../frontend/shared/scripts/sync-html.mjs ../ezze_menu/public/order_app/index.html ../ezze_menu/www/order.html",
+		"build": "vite build && node ../frontend/shared/scripts/sync-html.mjs ../ezze_menu/public/order_app/index.html ../ezze_menu/www/order-app.html",
 		"preview": "vite preview"
 	},
 	"dependencies": {

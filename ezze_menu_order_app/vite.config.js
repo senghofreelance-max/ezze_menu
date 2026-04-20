@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 
 export default createSharedViteConfig({
 	appDir: __dirname,
-	base: "/menu-order/",
+	base: "/assets/ezze_menu/order_app/",
 	outDir: path.resolve(__dirname, "../ezze_menu/public/order_app"),
 	port: 8086,
 });

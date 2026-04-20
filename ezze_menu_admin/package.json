@@ -5,8 +5,11 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite --port 8087",
-		"build": "vite build && node ../frontend/shared/scripts/sync-html.mjs ../ezze_menu/public/admin/index.html ../ezze_menu/www/menu_admin.html",
-		"preview": "vite preview"
+		"build": "vite build && node ../frontend/shared/scripts/sync-html.mjs ../ezze_menu/public/menu_admin/index.html ../ezze_menu/www/menu-admin.html",
+		"preview": "vite preview",
+		"copy-html-entry": "mkdir -p ../ezze_menu/www && cp ../ezze_menu/public/menu_admin/index.html ../ezze_menu/www/menu-admin.html",
+		"tw:init": "tailwindcss init -p",
+		"tw:build": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
 	},
 	"dependencies": {
 		"@casl/ability": "^6.8.0",
