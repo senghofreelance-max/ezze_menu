@@ -1,5 +1,5 @@
 <template>
-    <MainLayout :title="pageTitle">
+    <MainLayout :title="pageTitle" :app_title="app_title">
         <RouterView />
     </MainLayout>
 </template>
@@ -10,6 +10,6 @@ import { RouterView, useRoute } from "vue-router";
 import MainLayout from "./MainLayout.vue";
 
 const route = useRoute();
-
+const app_title = computed(() => localStorage.getItem("ezze-menu-admin-app-title") || "Admin Panel");
 const pageTitle = computed(() => route.meta.title || "Overview");
 </script>

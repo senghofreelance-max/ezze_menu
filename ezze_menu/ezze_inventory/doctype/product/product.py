@@ -15,6 +15,7 @@ class Product(Document):
 		from frappe.types import DF
 
 		auto_generate_code: DF.Check
+		company: DF.Link
 		description: DF.TextEditor | None
 		has_inventory: DF.Check
 		has_variant: DF.Check
@@ -22,9 +23,11 @@ class Product(Document):
 		price: DF.Currency
 		product_category: DF.Link | None
 		product_code: DF.Data | None
-		product_name: DF.Data | None
+		product_name: DF.Data
+		product_type: DF.Literal["Physical", "Food & Drink", "Digital", "Ticket", "Service"]
 		short_description: DF.SmallText | None
 		status: DF.Literal["Active", "Out Of Stock", "Disabled"]
+		title: DF.Data | None
 		uom: DF.Link | None
 	# end: auto-generated types
 

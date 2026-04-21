@@ -1,13 +1,18 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:product_code",
  "creation": "2026-04-10 09:18:53.864371",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "company",
+  "general_infor_section",
   "product_code",
   "auto_generate_code",
+  "title",
   "product_name",
+  "product_type",
   "price",
   "product_category",
   "column_break_hqfl",
@@ -25,10 +30,10 @@
   {
    "fieldname": "company",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Company",
    "options": "Company",
-   "reqd": 1,
-   "in_list_view": 1
+   "reqd": 1
   },
   {
    "fieldname": "product_code",
@@ -36,10 +41,12 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Product Code",
-   "mandatory_depends_on": "eval:doc.auto_generate_code==0"
+   "mandatory_depends_on": "eval:doc.auto_generate_code==0",
+   "read_only_depends_on": "eval:doc.auto_generate_code == 1",
+   "unique": 1
   },
   {
-   "default": "0",
+   "default": "1",
    "fieldname": "auto_generate_code",
    "fieldtype": "Check",
    "label": "Auto Generate Code"
@@ -49,18 +56,14 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Product Name"
+   "label": "Product Name",
+   "reqd": 1
   },
   {
    "fieldname": "price",
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Price"
-  },
-  {
-   "fieldname": "photo",
-   "fieldtype": "Attach Image",
-   "label": "Photo"
   },
   {
    "fieldname": "product_category",
@@ -73,10 +76,33 @@
    "fieldtype": "Column Break"
   },
   {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
    "default": "0",
    "fieldname": "has_inventory",
    "fieldtype": "Check",
    "label": "Has Inventory"
+  },
+  {
+   "default": "0",
+   "fieldname": "has_variant",
+   "fieldtype": "Check",
+   "label": "Has Variant"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nOut Of Stock\nDisabled"
   },
   {
    "fieldname": "section_break_hlhu",
@@ -99,32 +125,35 @@
    "label": "Description"
   },
   {
-   "fieldname": "uom",
-   "fieldtype": "Link",
-   "label": "UOM",
-   "options": "UOM"
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title"
   },
   {
-   "default": "0",
-   "fieldname": "has_variant",
-   "fieldtype": "Check",
-   "label": "Has Variant"
+   "fieldname": "general_infor_section",
+   "fieldtype": "Section Break",
+   "label": "General Info"
   },
   {
-   "fieldname": "status",
+   "fieldname": "product_type",
    "fieldtype": "Select",
-   "label": "Status",
-   "options": "Active\nOut Of Stock\nDisabled"
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Product Type",
+   "options": "Physical\nFood & Drink\nDigital\nTicket\nService",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "image_field": "photo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-21 02:28:38.169884",
+ "modified": "2026-04-21 07:39:20.622181",
  "modified_by": "Administrator",
- "module": "Ezze Menu",
+ "module": "Ezze Inventory",
  "name": "Product",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -144,5 +173,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "title"
 }

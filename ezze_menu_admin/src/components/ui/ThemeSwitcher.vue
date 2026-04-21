@@ -1,7 +1,7 @@
 <template>
     <div class="flex items-center">
         <EzzeButton type="button" @click="toggleMenu" variant="ghost" :icon="currentIcon"
-            class="h-11! w-11! rounded-lg! px-0! py-0! dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 shadow-sm transition-all duration-200"
+            class="h-11! w-11! rounded-full px-0! py-0! bg-white dark:bg-slate-900 text-slate-400 dark:text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 shadow-sm transition-all duration-200"
             aria-label="Toggle theme" />
         <Menu ref="menu" :model="items" :popup="true" :pt="menuStyle">
             <template #item="{ item, props }">

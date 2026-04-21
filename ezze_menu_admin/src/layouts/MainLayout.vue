@@ -1,8 +1,8 @@
 <template>
     <div class="app-shell flex min-h-screen">
-        <aside class="hidden w-72 shrink-0 border-r border-border bg-surface px-lg py-xl lg:block">
+        <aside class="hidden w-72 shrink-0 border-r border-border bg-surface px-lg py-md lg:block">
             <div class="mb-xl">
-                <p class="text-xs font-bold uppercase tracking-[0.24em] text-muted">Ezze Menu</p>
+                <p class="text-xs font-bold uppercase tracking-[0.24em] text-muted">{{ app_title }}</p>
                 <h1 class="mt-xs text-2xl font-extrabold text-heading">Admin Console</h1>
             </div>
 
@@ -25,7 +25,7 @@
             </header>
 
             <main class="flex-1 px-lg py-xl">
-                <div class="mx-8 max-w-9xl">
+                <div class="max-w-9xl">
                     <slot />
                 </div>
             </main>
@@ -40,6 +40,10 @@ import NavSidebar from "../components/ui/NavSidebar.vue";
 
 const props = defineProps({
     title: {
+        type: String,
+        default: "Overview",
+    },
+    app_title: {
         type: String,
         default: "Overview",
     },

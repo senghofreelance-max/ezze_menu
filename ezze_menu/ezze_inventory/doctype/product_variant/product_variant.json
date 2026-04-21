@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2026-04-21 02:33:09.099712",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "product_section",
+  "product",
+  "sku",
+  "price_adjustment",
+  "column_break_fhjh",
+  "product_name",
+  "section_break_mllu",
+  "attribute_name",
+  "column_break_zpej",
+  "attribute_value"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sku",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "SKU",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_mllu",
+   "fieldtype": "Section Break",
+   "label": "Attribute"
+  },
+  {
+   "fieldname": "attribute_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Attribute Name",
+   "options": "Variant Attribute",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zpej",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attribute_value",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Attribute Value",
+   "reqd": 1
+  },
+  {
+   "fieldname": "product",
+   "fieldtype": "Link",
+   "label": "Product",
+   "options": "Product",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_fhjh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "product_name",
+   "fieldtype": "Data",
+   "label": "Product Name"
+  },
+  {
+   "fieldname": "product_section",
+   "fieldtype": "Section Break",
+   "label": "Product"
+  },
+  {
+   "default": "0",
+   "fieldname": "price_adjustment",
+   "fieldtype": "Currency",
+   "label": "Price Adjustment",
+   "precision": "2"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-21 06:26:21.189362",
+ "modified_by": "Administrator",
+ "module": "Ezze Inventory",
+ "name": "Product Variant",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "sku"
+}

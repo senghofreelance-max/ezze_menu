@@ -5,7 +5,7 @@
 from frappe.model.document import Document
 
 
-class Product(Document):
+class ProductVariant(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
 
@@ -14,18 +14,12 @@ class Product(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		auto_generate_code: DF.Check
-		description: DF.TextEditor | None
-		has_inventory: DF.Check
-		has_variant: DF.Check
-		photo: DF.AttachImage | None
-		price: DF.Currency
-		product_category: DF.Link | None
-		product_code: DF.Data | None
+		attribute_name: DF.Link
+		attribute_value: DF.Data
+		price_adjustment: DF.Currency
+		product: DF.Link
 		product_name: DF.Data | None
-		short_description: DF.SmallText | None
-		status: DF.Literal["Active", "Out Of Stock", "Disabled"]
-		uom: DF.Link | None
+		sku: DF.Data
 	# end: auto-generated types
 
 	pass

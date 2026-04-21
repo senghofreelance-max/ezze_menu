@@ -1,1 +1,3 @@
 Ezze Menu
+Ezze Sale Config
+Ezze Inventory

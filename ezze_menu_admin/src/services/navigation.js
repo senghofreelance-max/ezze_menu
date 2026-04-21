@@ -2,6 +2,7 @@ import { ref } from "vue";
 
 const NAV_MENU_STORAGE_KEY = "ezze-menu-nav-menu";
 const FILTER_CONDITIONS_STORAGE_KEY = "ezze-menu-filter-conditions";
+const ADMIN_APP_TITLE_STORAGE_KEY = "ezze-menu-admin-app-title";
 
 function readJson(key, fallback) {
 	const raw = localStorage.getItem(key);
@@ -31,7 +32,9 @@ export function useFilterConditions() {
 export function setNavigationData(payload = {}) {
 	navMenu.value = payload.navbar_tree || [];
 	filterConditions.value = payload.filter_conditions || null;
-
+	if (payload.admin_app_title) {
+		localStorage.setItem(ADMIN_APP_TITLE_STORAGE_KEY, payload.admin_app_title);
+	}
 	localStorage.setItem(NAV_MENU_STORAGE_KEY, JSON.stringify(navMenu.value));
 
 	if (filterConditions.value) {
