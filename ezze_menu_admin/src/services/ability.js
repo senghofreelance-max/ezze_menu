@@ -27,7 +27,6 @@ export function defineAbilitiesFor(permissions = [], user = null) {
 				can(action, subject, { owner: user });
 				return;
 			}
-
 			can(action, subject);
 		});
 	});

@@ -50,20 +50,20 @@ export function createSharedViteConfig({ appDir, base, devBase, outDir, port }) 
 		plugins: [vue()],
 		base: command === "serve" ? (devBase || base) : base,
 		resolve: {
-			alias: {
-				"@": path.resolve(appDir, "src"),
-				"@shared": path.resolve(__dirname, "src"),
-				"@vendor/frappe-sdk": path.resolve(appDir, "src/vendor/frappe-sdk.js"),
-				"@vendor/primevue/config": path.resolve(appDir, "src/vendor/primevue/config.js"),
-				"@vendor/primevue/dialog": path.resolve(appDir, "src/vendor/primevue/dialog.js"),
-				"@vendor/primevue/toast": path.resolve(appDir, "src/vendor/primevue/toast.js"),
-				"@vendor/primevue/toastservice": path.resolve(
-					appDir,
-					"src/vendor/primevue/toastservice.js",
-				),
-				"@vendor/primevue/tooltip": path.resolve(appDir, "src/vendor/primevue/tooltip.js"),
-				"@vendor/vue-router": path.resolve(appDir, "src/vendor/vue-router.js"),
-			},
+			alias: [
+				{ find: "@", replacement: path.resolve(appDir, "src") },
+				{ find: "@shared", replacement: path.resolve(__dirname, "src") },
+				{ find: "@vendor/frappe-sdk", replacement: path.resolve(appDir, "src/vendor/frappe-sdk.js") },
+				{ find: "@vendor/primevue/config", replacement: path.resolve(appDir, "src/vendor/primevue/config.js") },
+				{ find: "@vendor/primevue/dialog", replacement: path.resolve(appDir, "src/vendor/primevue/dialog.js") },
+				{ find: "@vendor/primevue/toast", replacement: path.resolve(appDir, "src/vendor/primevue/toast.js") },
+				{ find: "@vendor/primevue/toastservice", replacement: path.resolve(appDir, "src/vendor/primevue/toastservice.js") },
+				{ find: "@vendor/primevue/tooltip", replacement: path.resolve(appDir, "src/vendor/primevue/tooltip.js") },
+				{ find: "@vendor/vue-router", replacement: path.resolve(appDir, "src/vendor/vue-router.js") },
+				// Resolve bare third-party imports used by shared components against the app's node_modules
+				{ find: /^primevue\/(.*)/, replacement: path.resolve(appDir, "node_modules/primevue/$1") },
+				{ find: "mustache", replacement: path.resolve(appDir, "node_modules/mustache/mustache.mjs") },
+			],
 		},
 		server: {
 			host: true,

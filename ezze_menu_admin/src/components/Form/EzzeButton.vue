@@ -1,5 +1,5 @@
 <template>
-    <button :type="type" :disabled="disabled || loading" :class="buttonClass">
+    <button v-if="hasPermission" :type="type" :disabled="disabled || loading" :class="buttonClass">
         <span v-if="loading" class="h-4 w-4 animate-spin rounded-full border-2 border-current border-r-transparent" />
         <i v-else-if="icon" :class="['pi', icon]" />
         <span v-if="$slots.default">
@@ -10,6 +10,7 @@
 
 <script setup>
 import { computed } from "vue";
+import { useAbility } from "@casl/vue";
 
 const props = defineProps({
     type: {
@@ -26,6 +27,23 @@ const props = defineProps({
         type: String,
         default: "",
     },
+    // CASL permission check — if both are set, button hides when user lacks the ability
+    action: {
+        type: String,
+        default: "",
+    },
+    subject: {
+        type: String,
+        default: "",
+    },
+});
+
+const { can } = useAbility();
+
+const hasPermission = computed(() => {
+    if (!props.action.toLowerCase() || !props.subject.toLowerCase()) return true;
+    console.log(can(props.action.toLowerCase(), props.subject.toLowerCase()))
+    return can(props.action.toLowerCase(), props.subject.toLowerCase());
 });
 
 const buttonClass = computed(() => {
