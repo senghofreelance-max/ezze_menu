@@ -1,20 +1,34 @@
 {
-  "_EzzeButton-BIKmKWyG.js": {
-    "file": "assets/EzzeButton-BIKmKWyG.js",
+  "_AppDialog-Dn3Lz2RH.js": {
+    "file": "assets/AppDialog-Dn3Lz2RH.js",
+    "name": "AppDialog",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "_EzzeButton-CyDh3rG3.js": {
+    "file": "assets/EzzeButton-CyDh3rG3.js",
     "name": "EzzeButton",
     "imports": [
       "index.html"
     ]
   },
-  "_useDarkMode-rFUx2Aa5.js": {
-    "file": "assets/useDarkMode-rFUx2Aa5.js",
+  "_index-BL6foCSv.js": {
+    "file": "assets/index-BL6foCSv.js",
+    "name": "index",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "_useDarkMode-BdJNHfSU.js": {
+    "file": "assets/useDarkMode-BdJNHfSU.js",
     "name": "useDarkMode",
     "imports": [
       "index.html"
     ]
   },
   "index.html": {
-    "file": "assets/main-qx6U4PWK.js",
+    "file": "assets/main-Dfxa_GYZ.js",
     "name": "main",
     "src": "index.html",
     "isEntry": true,
@@ -27,10 +41,13 @@
       "src/pages/dashboard/CatalogPage.vue",
       "src/pages/dashboard/DashboardPage.vue",
       "src/pages/dashboard/OrdersPage.vue",
-      "src/pages/dashboard/SettingsPage.vue"
+      "src/pages/dashboard/SettingsPage.vue",
+      "src/pages/payments/PaymentList.vue",
+      "src/pages/products/ProductList.vue",
+      "src/pages/sale/SaleOrderList.vue"
     ],
     "css": [
-      "assets/main-ndJL4p_w.css"
+      "assets/main-B4YlldPW.css"
     ],
     "assets": [
       "assets/primeicons-DMOk5skT.eot",
@@ -61,29 +78,30 @@
     "src": "node_modules/primeicons/fonts/primeicons.woff2"
   },
   "src/layouts/AdminShell.vue": {
-    "file": "assets/AdminShell-463mDrPn.js",
+    "file": "assets/AdminShell-C9_-yzTy.js",
     "name": "AdminShell",
     "src": "src/layouts/AdminShell.vue",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_useDarkMode-rFUx2Aa5.js",
-      "_EzzeButton-BIKmKWyG.js"
+      "_index-BL6foCSv.js",
+      "_useDarkMode-BdJNHfSU.js",
+      "_EzzeButton-CyDh3rG3.js"
     ]
   },
   "src/pages/auth/LoginPage.vue": {
-    "file": "assets/LoginPage-B_rzvfLC.js",
+    "file": "assets/LoginPage-Do7IU4VL.js",
     "name": "LoginPage",
     "src": "src/pages/auth/LoginPage.vue",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_EzzeButton-BIKmKWyG.js",
-      "_useDarkMode-rFUx2Aa5.js"
+      "_EzzeButton-CyDh3rG3.js",
+      "_useDarkMode-BdJNHfSU.js"
     ]
   },
   "src/pages/customers/CustomerList.vue": {
-    "file": "assets/CustomerList-ORGIbTc8.js",
+    "file": "assets/CustomerList-HuqWHU5X.js",
     "name": "CustomerList",
     "src": "src/pages/customers/CustomerList.vue",
     "isDynamicEntry": true,
@@ -92,7 +110,7 @@
     ]
   },
   "src/pages/dashboard/CatalogPage.vue": {
-    "file": "assets/CatalogPage-DKsyHbDq.js",
+    "file": "assets/CatalogPage-CNdoXnaA.js",
     "name": "CatalogPage",
     "src": "src/pages/dashboard/CatalogPage.vue",
     "isDynamicEntry": true,
@@ -101,17 +119,18 @@
     ]
   },
   "src/pages/dashboard/DashboardPage.vue": {
-    "file": "assets/DashboardPage-hx62Hd_o.js",
+    "file": "assets/DashboardPage-DBWY2Nkf.js",
     "name": "DashboardPage",
     "src": "src/pages/dashboard/DashboardPage.vue",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_EzzeButton-BIKmKWyG.js"
+      "_EzzeButton-CyDh3rG3.js",
+      "_AppDialog-Dn3Lz2RH.js"
     ]
   },
   "src/pages/dashboard/OrdersPage.vue": {
-    "file": "assets/OrdersPage-DWIWvwMz.js",
+    "file": "assets/OrdersPage-Cu6Leupm.js",
     "name": "OrdersPage",
     "src": "src/pages/dashboard/OrdersPage.vue",
     "isDynamicEntry": true,
@@ -120,9 +139,42 @@
     ]
   },
   "src/pages/dashboard/SettingsPage.vue": {
-    "file": "assets/SettingsPage-DiL4gLzl.js",
+    "file": "assets/SettingsPage-B4MygRis.js",
     "name": "SettingsPage",
     "src": "src/pages/dashboard/SettingsPage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  },
+  "src/pages/payments/PaymentList.vue": {
+    "file": "assets/PaymentList-Cw-3Wrkf.js",
+    "name": "PaymentList",
+    "src": "src/pages/payments/PaymentList.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  },
+  "src/pages/products/ProductList.vue": {
+    "file": "assets/ProductList-C_WU1Hru.js",
+    "name": "ProductList",
+    "src": "src/pages/products/ProductList.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_index-BL6foCSv.js",
+      "_AppDialog-Dn3Lz2RH.js",
+      "_EzzeButton-CyDh3rG3.js"
+    ],
+    "css": [
+      "assets/ProductList-DtE14pmP.css"
+    ]
+  },
+  "src/pages/sale/SaleOrderList.vue": {
+    "file": "assets/SaleOrderList-qNSBZVUF.js",
+    "name": "SaleOrderList",
+    "src": "src/pages/sale/SaleOrderList.vue",
     "isDynamicEntry": true,
     "imports": [
       "index.html"

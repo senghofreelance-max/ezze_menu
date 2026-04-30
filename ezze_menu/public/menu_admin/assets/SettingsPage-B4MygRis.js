@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,b as t}from"./main-Dfxa_GYZ.js";const o={},r={class:"app-panel p-lg"};function c(p,e){return n(),a("section",r,[...e[0]||(e[0]=[t("h2",{class:"app-section-title"},"Settings",-1),t("p",{class:"mt-sm text-sm text-muted"},"Prepared for business profile, integrations, and operational preferences.",-1)])])}const l=s(o,[["render",c]]);export{l as default};

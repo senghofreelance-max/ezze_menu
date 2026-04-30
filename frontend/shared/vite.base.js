@@ -54,6 +54,7 @@ export function createSharedViteConfig({ appDir, base, devBase, outDir, port }) 
 				{ find: "@", replacement: path.resolve(appDir, "src") },
 				{ find: "@shared", replacement: path.resolve(__dirname, "src") },
 				{ find: "@vendor/frappe-sdk", replacement: path.resolve(appDir, "src/vendor/frappe-sdk.js") },
+				{ find: "frappe-js-sdk", replacement: path.resolve(appDir, "node_modules/frappe-js-sdk") },
 				{ find: "@vendor/primevue/config", replacement: path.resolve(appDir, "src/vendor/primevue/config.js") },
 				{ find: "@vendor/primevue/dialog", replacement: path.resolve(appDir, "src/vendor/primevue/dialog.js") },
 				{ find: "@vendor/primevue/toast", replacement: path.resolve(appDir, "src/vendor/primevue/toast.js") },

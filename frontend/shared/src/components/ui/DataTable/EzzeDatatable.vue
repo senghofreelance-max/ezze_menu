@@ -147,6 +147,9 @@
                 <template v-if="col.body" #body="slotProps">
                     <component :is="col.body" :data="slotProps.data" :field="col.field" />
                 </template>
+                <template v-else-if="col.template" #body="slotProps">
+                    <div v-html="renderTemplate(col.template, slotProps.data)"></div>
+                </template>
                 <template v-else-if="col.field === 'name' && doctype" #body="slotProps">
                     <EzzeLink :value="slotProps.data[col.field]" :doctype="doctype" />
                 </template>
@@ -156,9 +159,6 @@
                 </template>
                 <template v-else-if="$slots[col.field]" #body="slotProps">
                     <slot :name="col.field" :data="slotProps.data" :index="slotProps.index"></slot>
-                </template>
-                <template v-else-if="col.template" #body="slotProps">
-                    <div v-html="renderTemplate(col.template, slotProps.data)"></div>
                 </template>
                 <template v-else-if="['Date', 'Datetime'].includes(col.fieldtype)" #body="slotProps">
                     <EzzeDateTime :value="slotProps.data[col.field]" :fieldtype="col.fieldtype" />

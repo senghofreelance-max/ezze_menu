@@ -1,1 +1,0 @@
-import{_ as a,o as s,c as n,b as t}from"./main-qx6U4PWK.js";const o={},c={class:"app-panel p-lg"};function r(p,e){return s(),n("section",c,[...e[0]||(e[0]=[t("h2",{class:"app-section-title"},"Catalog",-1),t("p",{class:"mt-sm text-sm text-muted"},"Prepared for menu sections, item variants, and pricing management.",-1)])])}const l=a(o,[["render",r]]);export{l as default};
